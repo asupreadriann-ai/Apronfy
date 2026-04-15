@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>Apronfy
+        </h2>
+        <ul>
+           <ul>
+    <li onclick="showSection('home')"> Dashboard</li>
+    <li onclick="showSection('search')"> Browse Music</li>
+    <li onclick="showSection('library')"> Music Library</li>
+</ul>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <main class="main-content">
+
+    <!-- HOME -->
+    <section id="homeSection" class="section active">
+        <h1>Featured Music Collection</h1>
+
+        <div class="albums">
+            <!-- your albums stay the same here -->
+            <!-- KEEP your existing album divs -->
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section id="searchSection" class="section">
+        <h1>Search Music</h1>
+
+        <input type="text" id="searchBox" placeholder="Search songs or artists..." onkeyup="searchSongs()">
+
+        <div id="searchResults"></div>
+    </section>
+
+    <!-- LIBRARY -->
+    <section id="librarySection" class="section">
+        <h1>Your Music Library</h1>
+
+        <div id="libraryList"></div>
+    </section>
+
+</main>
+        <h1>Albums</h1>
+
+        <div class="albums">
+
+            <div class="album">
+                <img src="images/cupofjoe.jpg">
+                <h3>Cup of Joe</h3>
+                <ul>
+                    <li onclick="playSong('songs/cup1.mp3','Misteryoso')">Misteryoso</li>
+                    <li onclick="playSong('songs/cup2.mp3','Multo')">Multo</li>
+                    <li onclick="playSong('songs/cup3.mp3','Tingin')">Tingin</li>
+                    <li onclick="playSong('songs/cup4.mp3','Pahina')">Pahina</li>
+                    <li onclick="playSong('songs/cup5.mp3','Estranghero')">Estranghero</li>
+                  
+                </ul>
+            </div>
+
+            <div class="album">
+                <img src="images/moira.jpg">
+                <h3>Moira Dela Torre</h3>
+                <ul>
+                    <li onclick="playSong('songs/moira1.mp3','Torete')">Torete</li>
+                    <li onclick="playSong('songs/moira2.mp3','Tagu-taguan')">Tagu-taguan</li>
+                    <li onclick="playSong('songs/moira3.mp3','Paubaya')">Paubaya</li>
+                    <li onclick="playSong('songs/moira4.mp3','Ikaw at Ako')">Ikaw at Ako</li>
+                    <li onclick="playSong('songs/moira5.mp3','Kumpas')">Kumpas</li>
+                </ul>
+            </div>
+
+            <div class="album">
+                <img src="images/taylor.jpg">
+                <h3>Taylor Swift</h3>
+                <ul>
+                    <li onclick="playSong('songs/taylor1.mp3','The fate of ophelia')">The fate of ophelia</li>
+                    <li onclick="playSong('songs/taylor2.mp3','Dayligth')">Dayligth</li>
+                    <li onclick="playSong('songs/taylor3.mp3','Guilty as sin')">Guilty as Sin</li>
+                    <li onclick="playSong('songs/taylor4.mp3','Back to December')">Back to December</li>
+                    <li onclick="playSong('songs/taylor5.mp3','Enchanted')">Enchanted</li>
+                </ul>
+            </div>
+
+            <div class="album">
+                <img src="images/benandben.jpg">
+                <h3>Ben&Ben</h3>
+                <ul>
+                    <li onclick="playSong('songs/ben1.mp3','Lifetime (Reimagine)')">Lifetime (Reimagine)</li>
+                    <li onclick="playSong('songs/ben2.mp3','Kathang Isip')">Kathang Isip</li>
+                    <li onclick="playSong('songs/ben3.mp3','Leaves')">Leaves</li>
+                    <li onclick="playSong('songs/ben4.mp3','Sarangola')">Sarangola</li>
+                    <li onclick="playSong('songs/ben5.mp3','Paninindigan Kita')">Paninindigan Kita</li>
+                </ul>
+            </div>
+
+            <div class="album">
+                <img src="images/december.jpg">
+                <h3>December Avenue</h3>
+                <ul>
+                    <li onclick="playSong('songs/dec1.mp3','Kung Di rin Ikaw')">Kung Di rin Ikaw</li>
+                    <li onclick="playSong('songs/dec2.mp3','Saksi ang Langit')">Saksi ang Langit</li>
+                    <li onclick="playSong('songs/dec3.mp3','Huling Sandali')">Huling Sandali</li>
+                    <li onclick="playSong('songs/dec4.mp3','Sa Ngalan Ng Pag-ibig')">Song 4</li>
+                    <li onclick="playSong('songs/dec5.mp3','Earoplanong Papel')">Earoplanong Papel
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+</div>
+
+<footer class="music-player">
+    <span id="nowPlaying">No Song Playing</span>
+    <audio id="audioPlayer" controls></audio>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
